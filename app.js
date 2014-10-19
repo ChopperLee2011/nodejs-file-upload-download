@@ -6,7 +6,7 @@ var routes = require('./routes');
 
 var app = express();
 
-//»·¾³±äÁ¿
+//ç¯å¢ƒå˜é‡
 app.set('port', process.env.PORT || 8081);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
@@ -15,17 +15,17 @@ app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// ¿ª·¢Ä£Ê½
+// å¼€å‘æ¨¡å¼
 if ('development' == app.get('env')) {
 	app.use(express.errorHandler());
 }
 
-app.use(express.bodyParser({uploadDir:'./uploads'}));	//ÓÃÀ´ÉÏ´«ÎÄ¼ş
+app.use(express.bodyParser({uploadDir:'./uploads'}));	//ç”¨æ¥ä¸Šä¼ æ–‡ä»¶
 
 //routes
 routes(app);
 
 var server = http.createServer(app).listen(8081);
 
-console.log('serve listening in 8081');
+console.log('serve is listening in 8081');
 
