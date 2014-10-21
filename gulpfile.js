@@ -8,7 +8,7 @@ gulp.task('lint',function(){
 });
 
 gulp.task('watch',function(){
-	gulp.watch('./app.js',['serve']);
+	gulp.watch('./*.js',['serve']);
 });
 
 gulp.task('serve',function(){
