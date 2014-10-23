@@ -9,13 +9,13 @@ exports.get_lists = function (req, res) {
 		//list['test1']= 'testA';
 		//list['test2']= 'testB';
 		fs.readdir(fd, function(err, files) {
-				// err Îª´íÎó
+				// err
 				if (err)	{ 
-					console.log('error:\n' + err) 
+					console.log('error:\n' + err) ;
 					return;
 				}
 				res.send( files );
 		});
-}
+};
 
 

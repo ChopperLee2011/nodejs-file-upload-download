@@ -12,3 +12,7 @@ next steps:
 1. 上传不了大文件，
 2. 界面优化。
 
+Version(express 4):
+1. change to use express 4;
+2. change rename file function to stream pipe;
+3. change a little front;
